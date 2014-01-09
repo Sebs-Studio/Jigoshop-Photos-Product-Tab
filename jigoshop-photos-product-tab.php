@@ -3,15 +3,15 @@
  * Plugin Name: Jigoshop Photos Product Tab
  * Plugin URI: http://www.sebs-studio.com/wp-plugins/jigoshop-photos-product-tab/
  * Description: Extends Jigoshop to allow you to display all images attached to a product in a new tab on the single product page.
- * Version: 1.1
- * Author: Sebs Studio
+ * Version: 1.2
+ * Author: Seb's Studio
  * Author URI: http://www.sebs-studio.com
  *
  * Text Domain: jigo_photos_product_tab
  * Domain Path: /lang/
  * Language File Name: jigo_photos_product_tab-'.$locale.'.mo
  *
- * Copyright 2013  Sebastien  (email : sebastien@sebs-studio.com)
+ * Copyright 2013  Seb's Studio  (email : sebastien@sebs-studio.com)
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -235,9 +235,7 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 			?>
 			<div id="photo-tab" class="panel jigoshop_options_panel" style="display:none;">
 				<fieldset>
-					<p class="form-field">
-						<?php echo jigoshop_form::checkbox($chkID, $label, $value, $desc); ?>
-					</p>
+					<?php echo jigoshop_form::checkbox($chkID, $label, $value, $desc); ?>
 				</fieldset>
 			</div>
 			<?php

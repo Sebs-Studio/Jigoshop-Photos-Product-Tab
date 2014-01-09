@@ -49,5 +49,11 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
-= 1.0 =
+= 1.2 - 13/05/2013 =
+* UPDATED - The padding around the checkbox in the product data panel.
+
+= 1.1 - 07/03/2013 =
+* REPLACED - Donation link with forum support link on the plugin page.
+
+= 1.0 - 26/02/2013 =
 * Initial Release.

@@ -1,20 +1,18 @@
 <?php
 /*
  * Plugin Name: Jigoshop Photos Product Tab
- * Plugin URI: http://www.sebs-studio.com/wp-plugins/jigoshop-photos-product-tab/
+ * Plugin URI: https://wordpress.org/plugins/jigoshop-photos-product-tab/
  * Description: Extends Jigoshop to allow you to display all images attached to a product in a new tab on the single product page.
- * Version: 1.2
+ * Version: 1.3
  * Author: Seb's Studio
  * Author URI: http://www.sebs-studio.com
  *
- * Text Domain: jigo_photos_product_tab
+ * Text Domain: jigoshop-photos-product-tab
  * Domain Path: /lang/
- * Language File Name: jigo_photos_product_tab-'.$locale.'.mo
  *
- * Copyright 2013  Seb's Studio  (email : sebastien@sebs-studio.com)
+ * Copyright 2013 Seb's Studio
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- *
  */
 
 if(!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -41,8 +39,8 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 
 	/* Localisation */
 	$locale = apply_filters('plugin_locale', get_locale(), 'jigoshop-photos-product-tab');
-	load_textdomain('jigo_photos_product_tab', WP_PLUGIN_DIR."/".plugin_basename(dirname(__FILE__)).'/lang/jigo_photos_product_tab-'.$locale.'.mo');
-	load_plugin_textdomain('jigo_photos_product_tab', false, dirname(plugin_basename(__FILE__)).'/lang/');
+	load_textdomain('jigoshop-photos-product-tab', WP_PLUGIN_DIR."/".plugin_basename(dirname(__FILE__)).'/lang/jigoshop-photos-product-tab-'.$locale.'.mo');
+	load_plugin_textdomain('jigoshop-photos-product-tab', false, dirname(plugin_basename(__FILE__)).'/lang/');
 
 	if(!class_exists('Jigoshop_Photo_Product_Tab')){
 		class Jigoshop_Photo_Product_Tab{
@@ -55,8 +53,8 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 			private $tab_data = false;
 
 			/**
-			 * Gets things started by adding an action to 
-			 * initialize this plugin once Jigoshop is 
+			 * Gets things started by adding an action to
+			 * initialize this plugin once Jigoshop is
 			 * known to be active and initialized.
 			 */
 			public function __construct(){
@@ -70,39 +68,39 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 			}
 
 			public function install_settings(){
-				Jigoshop_Base::get_options()->install_external_options_tab(__('Photos Product Tab', 'jigo_photos_product_tab'), $this->photo_tab_settings());
+				Jigoshop_Base::get_options()->install_external_options_tab(__('Photos Product Tab', 'jigoshop-photos-product-tab'), $this->photo_tab_settings());
 			}
 
-			/** 
+			/**
 			 * Adds a tab section in the settings to control the photo tab.
 			 */
 			public function photo_tab_settings(){
 				$setting = array();
 
 				$setting[] = array(
-								'name' => __('Photos Product Tab', 'jigo_photos_product_tab'),
+								'name' => __('Photos Product Tab', 'jigoshop-photos-product-tab'),
 								'type' => 'title',
 								'desc' => '',
 								'id' => 'photos_product_tab'
 							 );
 
-				$setting[] = array(  
-								'name' => __('Size of Photos', 'jigo_photos_product_tab'),
-								'desc' 		=> __('What size would you like to display ?', 'jigo_photos_product_tab'),
+				$setting[] = array(
+								'name' => __('Size of Photos', 'jigoshop-photos-product-tab'),
+								'desc' 		=> __('What size would you like to display ?', 'jigoshop-photos-product-tab'),
 								'id' 		=> 'jigoshop_product_photo_tab_size',
 								'type' 		=> 'select',
 								'choices'	=> array(
-													'thumbnail' => __('Thumbnail', 'jigo_photos_product_tab'),
-													'medium'	=> __('Medium', 'jigo_photos_product_tab'),
-													'large'	=> __('Large', 'jigo_photos_product_tab'),
-													'full'	=> __('Full / Original', 'jigo_photos_product_tab'),
+													'thumbnail' => __('Thumbnail', 'jigoshop-photos-product-tab'),
+													'medium'	=> __('Medium', 'jigoshop-photos-product-tab'),
+													'large'	=> __('Large', 'jigoshop-photos-product-tab'),
+													'full'	=> __('Full / Original', 'jigoshop-photos-product-tab'),
 												),
 								'std'		=> 'thumbnail',
 							 );
 
-				$setting[] = array(  
-								'name' => __('Enable Lightbox', 'jigo_photos_product_tab'),
-								'tip' 		=> __('Enable the use of lightbox for the photos in the tab.', 'jigo_photos_product_tab'),
+				$setting[] = array(
+								'name' => __('Enable Lightbox', 'jigoshop-photos-product-tab'),
+								'tip' 		=> __('Enable the use of lightbox for the photos in the tab.', 'jigoshop-photos-product-tab'),
 								'id' 		=> 'jigoshop_product_photo_tab_lightbox',
 								'type' 		=> 'checkbox',
 								'std'		=> '',
@@ -135,8 +133,8 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 					return $links;
 				}
 				if($file == Jigoshop_Photo_Product_Tab::$plugin_basefile){
-					$links[] = '<a href="http://www.sebs-studio.com/forum/jigoshop-photos-product-tab/" target="_blank">'.__('Support', 'jigo_photos_product_tab').'</a>';
-					$links[] = '<a href="http://www.sebs-studio.com/wp-plugins/jigoshop-extensions/" target="_blank">'.__('More Jigoshop Extensions', 'jigo_photos_product_tab').'</a>';
+					$links[] = '<a href="http://www.sebs-studio.com/forum/jigoshop-photos-product-tab/" target="_blank">'.__('Support', 'jigoshop-photos-product-tab').'</a>';
+					$links[] = '<a href="http://www.sebs-studio.com/wp-plugins/jigoshop-extensions/" target="_blank">'.__('More Jigoshop Extensions', 'jigoshop-photos-product-tab').'</a>';
 				}
 				return $links;
 			}
@@ -162,7 +160,7 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 				$photo_tab = get_post_meta($post->ID, 'jigoshop_disable_product_photos', true);
 				if($countPhotos > 0 && $photo_tab == ''){
 				?>
-					<li<?php if($current_tab == '#tab-photos'){ echo ' class="active"'; } ?>><a href="#tab-photos"><?php echo __('Photos', 'jigo_photos_product_tab'); ?></a></li>
+					<li<?php if($current_tab == '#tab-photos'){ echo ' class="active"'; } ?>><a href="#tab-photos"><?php echo __('Photos', 'jigoshop-photos-product-tab'); ?></a></li>
 				<?php
 				}
 			}
@@ -182,7 +180,7 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 				$photo_tab = get_post_meta($post->ID, 'jigoshop_disable_product_photos', true);
 				if($countPhotos > 0 && $photo_tab == ''){
 					echo '<div class="panel" id="tab-photos">';
-					echo '<h2>'.__('Photos', 'jigo_photos_product_tab').'</h2>';
+					echo '<h2>'.__('Photos', 'jigoshop-photos-product-tab').'</h2>';
 					$argsThumb = array(
 						'order'			 => 'ASC',
 						'post_type'		 => 'attachment',
@@ -231,7 +229,7 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 				$chkID = 'jigoshop_disable_product_photos';
 				$label = '';
 				$value = $check;
-				$desc = __('Disable photos tab?', 'jigo_photos_product_tab');
+				$desc = __('Disable photos tab?', 'jigoshop-photos-product-tab');
 			?>
 			<div id="photo-tab" class="panel jigoshop_options_panel" style="display:none;">
 				<fieldset>
@@ -263,7 +261,7 @@ if(in_array('jigoshop/jigoshop.php', apply_filters('active_plugins', get_option(
 		}
 	}
 
-	/* 
+	/*
 	 * Instantiate plugin class and add it to the set of globals.
 	 */
 	$jigoshop_photos_tab = new Jigoshop_Photo_Product_Tab();

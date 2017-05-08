@@ -1,6 +1,6 @@
 === Jigoshop Photos Product Tab ===
-Contributors: sebd86
-Tags: ecommerce, e-commerce, commerce, sebs studio, jigoshop, photos, images, extension, gallery, product, tab
+Contributors: sebsstudio, sebd86
+Tags: ecommerce, e-commerce, commerce, jigoshop, photos, images, extension, gallery, product, tab, adopt-me
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: trunk
@@ -11,17 +11,11 @@ Extends Jigoshop to allow you to display all images attached to a product in a n
 
 == Description ==
 
+> This plugin is longer maintained and is up for adoption. [See this article](https://sebastiendumont.com/2017/03/29/wordpress-plugins-adoption/) to find out how to adopt this plugin.
+
 Extends Jigoshop to allow you to display all images attached to a product in a new tab on the single product page.
 
 Select the size of the images to display from Thumbnail to Full Size and enable the use of Lightbox.
-
-= Localization =
-English (default) - always included. *.po file (default.po) in language folder for translations.
-If you do a translation for your site please send it to me to include as part of the plugin language folder. I'll acknowledge your work here. To send your translation files contact me. (http://www.sebs-studio.com/contact/)
-
-= Related Plugins =
-
-Jigoshop Video Product Tab - http://www.sebs-studio.com/wp-plugins/jigoshop-video-product-tab/
 
 == Installation ==
 

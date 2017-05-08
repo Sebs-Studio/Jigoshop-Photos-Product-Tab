@@ -1,6 +1,6 @@
 === Jigoshop Photos Product Tab ===
 Contributors: sebsstudio, sebd86
-Tags: ecommerce, e-commerce, commerce, jigoshop, photos, images, extension, gallery, product, tab, adopt-me
+Tags: adopt-me, ecommerce, e-commerce, commerce, jigoshop, photos, images, extension, gallery, product, tab
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: 1.3

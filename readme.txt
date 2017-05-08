@@ -3,7 +3,7 @@ Contributors: sebsstudio, sebd86
 Tags: ecommerce, e-commerce, commerce, jigoshop, photos, images, extension, gallery, product, tab, adopt-me
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
